@@ -1,8 +1,17 @@
 from typing import Union
-
 from fastapi import FastAPI
+from contextlib import asynccontextmanager
+from app.db import engine
+from app.models import * # import all models
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # start up
+    Base.metadata.create_all(bind=engine) # init db
+    yield
+    # shut down
+
+app = FastAPI(lifespan=lifespan)
 
 
 @app.get("/")
