@@ -1,3 +1,55 @@
-.venv
-.env
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Environment variables
+.env
+
+# SQLite database
+*.db
+
+# VSCode settings (optional, if you use VSCode and want to ignore workspace settings)
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Python egg files
+*.egg-info/
+*.egg
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Jupyter Notebook checkpoints (if you ever use them)
+.ipynb_checkpoints/
+
+# Testing coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+
+# Mypy and other type checkers
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Pytest
+.cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

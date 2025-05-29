@@ -1,12 +1,12 @@
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from .llm import llm 
-from .tools import create_appointment_tool
+from .tools import create_appointment
 from .memory import get_memory
 
 def get_agent(session_id: str):
     memory = get_memory(session_id)
-    tools = [create_appointment_tool]
+    tools = [create_appointment]
     
     prompt = ChatPromptTemplate.from_messages([
     ("system",
